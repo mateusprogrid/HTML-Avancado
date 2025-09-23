@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus Melo">
+    <title>Estrutura e Formatação HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <h2>Títulos em HTML</h2>
+    <br>
+    <!-- Usado para o título da página -->
+    <h1>Título 1</h1>
+    
+    <!-- h2 a h6 podem ser usados para as seções principais com hierarquia -->
+    <h2>Título 2</h2>
+    <h3>Título 3</h3>
+    <h4>Título 4</h4>
+    <h5>Título 5</h5>
+    <h6>Título 6</h6>
+    
+    <br>
+    <hr>
+    <h2>Tags em HTML</h2>
+    <br>
+    
+    <!-- <strong> é usado para deixar em negrito -->
+    <p>Indica que o <strong>texto incluso</strong> deve ser tratado como um parágrafo.</p>
+    <br>
+
+    <!-- <em> é usado para deixar em itálico -->
+    <p>Indica que o <em>texto incluso</em> deve ser tratado como um parágrafo.</p>
+   <br>
+    
+    <!-- <u> é usado para sublinhar -->
+    <p>Indica que o <u>texto incluso</u> deve ser tratado como um parágrafo.</p>
+    <br>
+    
+    <!-- <sup> é usado para deixar sobrescrito -->
+    <p>Indica que o texto incluso deve ser tratado como um parágrafo. (1<sup>st</sup>)</p>
+    <br>
+    
+    <!-- <sub> é usado para deixar subscrito -->
+    <p>Indica que o texto incluso deve ser tratado como um parágrafo. (H<sub>2</sub>O)</p>
+    <br>
+    
+    <!-- <del> é usado para riscar o texto -->
+    <p>Indica que o <del>texto incluso</del> deve ser tratado como um parágrafo.</p>
+    <br>
+    
+    <!-- <mark> é usado para destacar o texto -->
+    <p>Indica que o <mark>texto incluso</mark> deve ser tratado como um parágrafo.</p>
+    <br>
+    
+    <!-- <q> é usado para citações curtas -->
+    <p>Indica que o <q>texto incluso</q> deve ser tratado como um parágrafo.</p>
+    <br>
+    
+    <!-- <blockquote> é usado para citações longas e em bloco -->
+    <p>Como Albert Einstein disse uma vez:</p>
+    <blockquote>
+    <p>"A imaginação é mais importante que o conhecimento. O conhecimento é limitado. A imaginação abrange o mundo. O verdadeiro sinal de inteligência não é o conhecimento, mas a imaginação."</p>
+    </blockquote>
+    <p>Esta citação remete à ideia de que a criatividade e o pensamento original são mais importantes do que simplesmente acumular conhecimento. Sugere que a capacidade de enxergar além do que já se sabe e imaginar novas possibilidades é uma característica fundamental da inteligência.</p>
+    <br>
+    
+    <!-- <cite> é usado para indicar uma referência, fornecer atribuição, crédito ou fonte -->
+    <p>Eu li recentemente <cite>O Grande Gatsby</cite> por F. Scott Fitzgerald.</p>
+    <p>Como Steve Jobs disse uma vez, <q cite="https://www.brainyquote.com/quotes/steve_jobs_416096">A inovação distingue um líder de um seguidor.</q></p>
+    <br>
+    
+    <!-- <footer> é usado para fornecer contexto para citações SEO -->
+    <blockquote>
+    <p>Quanto mais você ler, mais coisas você saberá. Quanto mais você aprender, mais lugares você visitará.</p>
+    <footer>- Dr. Seuss</footer>
+    </blockquote>
+    <br>
+    
+    <!-- <br> é usado para quebra de linha -->
+    <p>Indica que o texto incluso<br>deve ser tratado como um parágrafo.</p>
+    <br>
+    
+    <!-- <hr> é usado para quebra de linha e cria uma linha horizontal -->
+    <p>Indica que o texto incluso<hr>deve ser tratado como um parágrafo.</p>
+    <br>
+    
+    <!-- <code> é usado para destacar um trcho de código -->
+    <p> <code>Olá Mundo!!</code> </p>
+    <br>
+    
+    <!-- <pre> é usado para texto pré-formatado, como código, poesia ou letras de música -->
+    <p> <pre>Olá, mundo! Que visão,
+Uma rede vasta e infinita,
+Conectando você e eu.</pre> </p>
+    <br>
+    
+    <!-- <kbd> ou <samp> é usado para exibir texto de entrada de teclado ou saída de amostra -->
+    <p> <samp>Nome de usuário ou senha inválido </samp><br><kbd>ctrl + c</kbd> </p>
+    
+    <br>
+    <hr>
+    <h2>Listas em HTML</h2>
+    <br>
+    
+    <!-- Listas em HTML -->
+        <!-- 
+        Existem três tipos:
+        • listas não ordenadas;
+        • listas ordenadas;
+        • listas de definições;
+        • listas aninhadas.
+        -->
+
+    <!-- Listas não ordenadas são criadas com a tag <ul></ul>
+     e são usadas para exibir uma lista de itens sem uma ordem específica.
+     Cada item na lista é representado pela tag <li></li>
+    -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <br>
+    <br>
+    
+    <!-- Listas ordenadas são criadas com a tag <ol></ol>
+     e são usadas para exibir uma lista de itens em uma ordem específica.
+     Cada item na lista é representado pela tag <li></li>
+    -->
+    <ol>
+        <li>Primeiro item</li>
+        <li>Segundo item</li>
+        <li>Terceiro item</li>
+    </ol>
+    <br>
+    <br>
+
+    <!-- Listas de definições são criadas com a tag <dl></dl>
+     e são usadas para exibir uma lista de termos e suas definições.
+     Cada termo e representado pela tag <dd></dd> e cada definição é
+     representada pela tag <dt>/<dt>
+    -->
+    <dl>
+        <dt>Termo 1</dt>
+        <dd>Definição 1</dd>
+        <dt>Termo 2</dt>
+        <dd>Definição 2</dd>
+        <dt>Termo 3</dt>
+        <dd>Definição 3</dd>
+    </dl>
+    <br>
+    <br>
+
+    <!-- Listas aninhadas permite aninhar listas dentro de outras listas. 
+     Isso significa que você pode criar uma hierarquia de informações, onde
+     sublistas são recuadas para mostrar que pertencem a um item da lista pai.
+    -->
+    <ul>
+        <li>Primeiro item</li>
+        <li>Segundo item
+            <ul>
+                <li>Sub-item 1</li>
+                <li>Sub-item 2</li>
+            </ul>
+        </li>
+        <li>Terceiro item</li>
+    </ul>
+    
+    <br>
+    <hr>
+    <h2>Tabelas em HTML</h2>
+    <br>
+    
+    <!-- Tabelas em HTML -->
+        <!-- 
+        As tabelas são compostas por linhas e colunas
+        -->
+    
+    <!-- Tabela básica -->
+    <!--
+     → Para criar uma tabela você precisa de três elementos:
+     <table> define a tabela inteira.
+     <tr> define uma linha dentro da tabela.
+     <td> define uma célula dentro da linha.
+
+     → Para criar uma tabela mais avançada você precisa saber alguns 
+     elementos(não precisam ser usados em conjunto e não são primordiais):
+     <th> define o cabeçalho de cada coluna.
+     <caption> utilizado para adicionar um título a tabela.
+
+     → Para criar uma tabela mais avançada você precisa saber alguns 
+     atributos de <table ... >:
+     • border , que define o tamanho da borda da tabela (obsoleto no HTML 5, 
+     CSS deve ser usado em seu lugar).
+     • cellspacing , que define o espaço entre as células na tabela (obsoleto no 
+     HTML 5, CSS deve ser usado em seu lugar).
+     • cellpadding , que define o espaço entre o conteúdo da célula e a borda da 
+     célula (obsoleto no HTML 5, CSS deve ser usado em seu lugar).
+     • width , que define a largura da tabela (obsoleto no HTML 5, CSS deve ser 
+     usado em seu lugar).
+     • altura , que define a altura da tabela.
+     • align , que define o alinhamento horizontal da tabela (obsoleto no HTML 5, 
+     CSS deve ser usado em seu lugar).
+     • bgcolor , que define a cor de fundo da tabela (obsoleto no HTML 5, CSS deve ser 
+     usado em seu lugar).
+     -->
+    <table>
+        <caption>Modelo de Tabela Básica</caption>
+        <tr>
+            <th>Cabeçalho 1</th>
+            <th>Cabeçalho 2</th>
+        </tr>
+        <tr>
+            <!-- Linha 1 -->
+            <td>Coluna 1</td>
+            <td>Coluna 2</td>
+        </tr>
+        <tr>
+            <!-- Linha 2 -->
+            <td>Coluna 1</td>
+            <td>Coluna 2</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <!--
+     <th> define o cabeçalho de cada coluna.
+        • <th colspan="x"> especifica quantas colunas uma célula deve abranger
+            x - "número pelo qual ele se estende na linha, mesclando as células horizontalmente"
+        • <th rowspan="x"> especifica quantas linhas uma célula deve abranger
+            x - "número pelo qual ele se estende na coluna, mesclando as células verticalmente"
+    -->
+    <table>
+        <caption> <strong>Mesclando com rowspan e colspan</strong> </caption>
+        <tr>
+            <th rowspan="2">Produto</th>
+            <th colspan="2">Preço</th>
+        </tr>
+        <tr>
+            <th>Velho</th>
+            <th>Novo</th>
+        </tr>
+        <tr>
+            <td>Produto 1</td>
+            <td>R$10,00</td>
+            <td>R$12,00</td>
+        </tr>
+        <tr>
+            <td>Produto 2</td>
+            <td>R$15,00</td>
+            <td>R$18,00</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <!-- 
+     Lembre-se de que isso pode resultar em código HTML complexo, o que pode dificultar a manutenção 
+     de tabelas maiores e mais complexas. Nesses cenários, usar CSS para estilizar suas tabelas pode ser 
+     uma opção melhor. 
+    -->
+    <table border="1" cellspacing="10" cellpadding="5" width="80%" height="200" align="center" bgcolor="#f2f2f2">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Product 1</td>
+            <td>$10.00</td>
+        </tr>
+        <tr>
+            <td>Product 2</td>
+            <td>$15.00</td>
+        </tr>
+    </table>
+    <!-- 
+     Há outro atributo que desempenha um papel essencial na melhori da experiaência do usuário. 
+     Trata-se do atributo summary , que fornece um resumo da tabela para usuários que utilizam tecnologias 
+     assistivas, como leitores de tela. 
+     
+     É importante observar que alguns atributos mais antigos, como border , cellpadding e cellspacing, agora 
+     estão obsoletos no HTML5, portanto, é recomendável usar CSS.
+    
+     Usar o atributo summary pode ajudar a tornar suas tabelas mais acessíveis e fáceis de entender para todos os usuários.
+     -->
+
+</body>
+</html>
