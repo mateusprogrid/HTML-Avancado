@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus Melo">
+    <title>Links em HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <h1>Explorando Elementos Visuais e Interativos</h1>
+    <h2>Links em HTML</h2>
+    
+    <!-- A tag <a> e o atributo href -->
+    <!--
+     Em HTML, você pode criar links facilmente usando a tag <a> , que significa "âncora".
+     A tag <a> depende principalmente do atributo href , que especifica o destino do link . 
+     Esse destino pode ser uma URL absoluta (como https://www.example.com/) ou uma URL relativa 
+     (como about.html se a página de destino residisse no mesmo diretório da página atual).
+     
+
+     Para adicionar um texto de link visível e clicável em HTML, você precisa colocá-lo entre 
+     a tag de abertura <a> e a tag de fechamento </a>.
+    -->
+    
+    <br>
+    
+    <!-- Link Externo -->
+    <!-- 
+     É importante observar que, como os links externos levam os usuários para fora do seu site, 
+     você deve garantir que eles abram em uma nova janela ou aba usando o atributo target.
+    
+     O atributo target="_blank" abrirá a página vinculada em uma nova aba ou janela , permitindo 
+     que os usuários retornem facilmente ao seu site. O atributo target="_self" abrirá o link na 
+     mesma janela.
+     -->
+    <a href="https://www.netacad.com/" target="_blank">Visite o site da Cisco Networking Academy</a>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Link Interno -->
+    <a href="page.html">Visite o Globo</a>
+    
+    <br>
+    <br>
+    <hr>
+
+    <!-- Links que apontam para seções específicas dentro de uma página da web -->
+    <!--
+     Para criar um link como este, você precisará do atributo id e do símbolo # . 
+     Veja como fazer:
+     • Adicione o atributo id a um elemento HTML na página para a qual deseja criar 
+     um link. Por exemplo, se você quiser criar um link para um elemento <h2> com o 
+     conteúdo “ Seção 1 ”, faça o seguinte: <h2 id="section-1">Section 1</h2>.
+     • Em seguida, crie um link que aponte para essa âncora adicionando o símbolo # seguido 
+     do id ao atributo href de uma tag <a> , assim: <a href="#section-1">Go to Section 1</a>.
+    
+     Quando um usuário clica neste link, ele será levado para a seção da página com o 
+     id="section-1". É importante observar que o valor do id deve ser único na página, 
+     e é uma boa prática usar nomes descritivos que indiquem o conteúdo da seção.
+     -->
+
+    <h2 id="section-1">seção 1</h2>
+    <a href="#section-1">Vá para a seção 1</a>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    
+    <!-- Links de e-mail e telefone -->
+    <!--
+     • Para criar um link de e-mail, você pode usar o protocolo mailto seguido do endereço 
+     de e-mail ao qual deseja vincular.
+     • Da mesma forma, para criar um link telefônico, você pode usar o telprotocolo seguido do 
+     número de telefone ao qual deseja vincular.
+    -->
+
+    <a href="mailto:carlosmelo.loja@gmail.com">Nosso e-mail</a>
+    
+    <br>
+    <br>
+    
+    <a href="tel:+55-11-99894-6231">Ligue para nós</a>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    
+    <!-- Outros atributos específicos do link: download, rel e title -->
+    <!--
+     Além dos atributos href e target comumente usados, existem vários outros atributos específicos 
+     de link que podem ser usados ​​para aprimorar a funcionalidade e a experiência do usuário com hiperlinks. 
+     Aqui estão três exemplos: 
+     • download (especifica que o destino do link deve ser baixado, em vez de navegado)
+     • rel (especifica o relacionamento entre o documento atual e o documento de destino)
+     • title (fornece informações adicionais sobre um elemento, melhorando a compreensão e a interação do usuário 
+     com o conteúdo da web)
+    -->
+
+    <a href="https://example.com/document.pdf" download="my-document.pdf">Baixe o PDF</a>
+    
+    <br>
+    <br>
+
+    <a href="https://example.com/stylesheet.css" rel="stylesheet">Link para stylesheet</a>
+    
+    <br>
+
+    <p>Vá para <a href="https://example.com/about" title="Visite nossa seção sobre.">Nosso Site</a> Para mais informações.</p>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Transformando elementos em links -->
+    <!--
+     Para tornar um elemento clicável, basta envolvê-lo com a tag <a> . O atributo href dentro desta tag define a 
+     URL para a qual o link aponta.
+
+     Este método funciona com uma ampla variedade de elementos, incluindo imagens, blocos de texto e até mesmo 
+     estruturas HTML complexas, como divs ou seções.
+    -->
+     
+    <a href="https://s2-ge.glbimg.com/e7YMC181mCjRjDdNVBUDyuxI2UQ=/10x267:1912x1408/640x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/a/R/ynhks2TX6EWeSZHhTc2A/e6ai4rgxiakjokl.jpg">
+    <img src="imagens/redbull-f1.webp" alt="Mountain landscape" width="600" height="350">
+    </a>
+    <!--
+     Neste exemplo, a imagem se torna parte do link clicável. Isso é particularmente útil para criar botões de chamada 
+     para ação (CTA) visualmente atraentes ou elementos de cartão de link que contenham uma combinação de texto, imagens 
+     e outras mídias.
+    -->
+
+</body>
+</html>
