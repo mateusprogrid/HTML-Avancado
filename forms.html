@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus Melo">
+    <title>Formulários em HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <h1>Explorando a criação de formulários em HTML 👨🏻‍💻</h1>
+
+    <!-- O que são formulários HTML -->
+    <!--
+     Um formulário HTML é uma seção de uma página web que contém elementos 
+     interativos, como campos de entrada, caixas de seleção, botões de opção
+     e botões. Esses elementos permitem que os usuários insiram dados e 
+     interajam com a página web . Embora um uso comum dos formulários seja 
+     enviar dados a um servidor para processamento, eles também podem servir
+     a vários outros propósitos.
+
+     Ele é comumente usado para vários propósitos, incluindo coletar informações 
+     do usuário, realizar pesquisas e permitir que os usuários façam login ou 
+     criem contas.
+    -->
+
+    <!-- O elemento <form> -->
+    <!--
+     Para criar um formulário, você deve usar o elemento <form> . Dentro do 
+     elemento <form> , você pode adicionar vários campos de entrada, como 
+     entrada de texto , botões de opção , caixas de seleção e muito mais.
+     O elemento <form> normalmente inclui atributos:
+     • action (especifica a URL do script ou endpoint do lado do servidor que 
+     processará os dados do formulário. Quando o formulário for enviado, o 
+     navegador enviará os dados do formulário para a URL especificada)
+     • method (especifica o método HTTP (GET ou POST) usado ao enviar dados do 
+     formulário para o servidor, seu valor é definido como "GET" ou "POST")
+    -->
+
+    <form action="submit-form.php" method="POST">
+    <!-- Elementos/campos do formulário vão aqui -->
+    </form>
+
+    <!-- Vamos ver o que acontece aqui -->
+    <!--
+     O código cria um elemento de formulário HTML que usa o método POST para 
+     enviar dados ao arquivo " submit-form.php " no servidor, que provavelmente 
+     é um script do lado do servidor que receberá e manipulará os dados do formulário 
+     enviados pelo usuário.
+
+     Após o usuário enviar o formulário, os dados inseridos nos campos são enviados 
+     ao script do lado do servidor para processamento. O script pode então executar 
+     ações como salvar os dados em um banco de dados, enviar um e-mail ou exibir uma 
+     mensagem de confirmação ao usuário.
+    -->
+
+    <!-- Os métodos GET e POST -->
+    <!--
+     O Método GET:
+     O método GET envia os dados do formulário na string de consulta da URL . Isso 
+     significa que os dados do formulário ficam visíveis na barra de endereços do 
+     navegador e podem ser adicionados aos favoritos ou compartilhados com outras 
+     pessoas.
+     É comumente usado para formulários simples que não exigem muita segurança (os 
+     dados ficam visíveis na URL, então não é o melhor método para enviar dados 
+     confidenciais).
+     Por exemplo, se um usuário enviar um formulário com o nome "John" e o e-mail 
+     "john@example.com", a URL ficará assim: 
+     https://example.com/form.php?name=John&email=john%40example.com.
+
+     O Método POST:
+     O método POST envia os dados do formulário no corpo da solicitação HTTP . Isso 
+     significa que os dados do formulário não ficam visíveis na URL ou na barra de 
+     endereços do navegador.
+     É comumente usado para formulários mais complexos que exigem maior segurança, 
+     como formulários de login ou formulários que contêm informações confidenciais.
+     No entanto, os dados do formulário não podem ser marcados, compartilhados ou 
+     armazenados em cache pelo navegador, como no caso do método GET.
+     
+     Atenção!!
+     Aqui, focaremos exclusivamente em HTML e não abordaremos os detalhes do 
+     envio de formulários, como os métodos POST e GET, nem o envio do formulário e 
+     seus dados. Essas tarefas normalmente exigem linguagens do lado do servidor, 
+     como PHP, ou frameworks de desenvolvimento web, como Node.js, Ruby on Rails ou 
+     Django.
+    -->
+
+    <!-- Os elementos <input> e <label> -->
+    <!--
+     O elemento <input> é usado para criar diferentes tipos de campos de entrada para
+     coletar dados do usuário. Ele pode ser configurado para aceitar diversos tipos 
+     de dados, como texto, senhas, números e e-mails, entre outros, por meio do uso 
+     do atributo type. 
+     Os atributos do <input> são:
+     • type (os tipos de entrada: text, email, url, number, password, checkbox, radio,
+     submit e reset.)
+     • name (cada campo de entrada deve ter um atributo de nome, ele é essencial para
+     identificar cada dado enviado. Ele atua como uma chave para os dados do formulário, 
+     permitindo que o script do lado do servidor acesse e processe as entradas do usuário 
+     com base nesses nomes.)
+     • required (Adicionar o atributo obrigatório a um campo de entrada torna obrigatório
+     o preenchimento do campo pelos usuários antes de enviar o formulário. É uma maneira 
+     simples de garantir que informações cruciais não sejam omitidas.)
+
+     O elemento <label> desempenha um papel vital na criação de formulários acessíveis e 
+     fáceis de usar. Ele fornece uma descrição textual para cada campo de entrada, melhorando 
+     a legibilidade e a usabilidade do formulário.
+     Ao associar um rótulo a um campo de entrada específico usando o atributo for (que deve 
+     corresponder ao atributo id da entrada ), os usuários podem clicar no rótulo para focar 
+     na entrada correspondente, um recurso particularmente benéfico para aqueles que usam 
+     tecnologias assistivas.
+    -->
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="useremail" required>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Veja o que acontece nesse código: -->
+    <!--
+     1. <label for="email">E-mail:</label> cria um rótulo para o campo de entrada. O atributo 
+     for do rótulo é definido como "email", o que significa que este rótulo está associado a 
+     um elemento de entrada cujo atributo id é "email". O texto "E-mail:" é exibido ao usuário
+     ao lado do campo de entrada, indicando quais informações são esperadas no campo de entrada 
+     associado.
+     2. <input type="email" id="email" name="useremail" required> define um campo de entrada 
+     projetado para receber um endereço de e-mail:
+        • type="email" especifica que a entrada deve ser um endereço de e-mail. Os navegadores
+         modernos verificam se o texto inserido está no formato de um endereço de e-mail (por 
+         exemplo, usuario@exemplo.com) e avisam o usuário caso não esteja.
+        • id="email" atribui um identificador ao campo de entrada, vinculando-o ao rótulo por
+         meio do atributo for. Isso melhora a acessibilidade, pois clicar no rótulo fará com 
+         que o campo de entrada seja destacado.
+        • name="useremail" nomeia os dados inseridos neste campo como "useremail", que é usado 
+         para identificar os dados do formulário no lado do servidor após o envio.
+        • required marca o campo como obrigatório, o que significa que o formulário não pode ser 
+         enviado sem um endereço de e-mail inserido neste campo.
+    -->
+
+    <!-- Aprimorando formulários com elementos-chave: <textarea>, <select>, <button> e <fieldset> -->
+    <!--
+     Além do elemento de entrada , existem outros elementos de formulário que você pode usar 
+     em formulários HTML. Alguns deles incluem <textarea>, <select>, <button> e <fieldset>.
+     • <textarea> (cria um campo de entrada de texto com várias linhas, permitindo que os usuários
+     insiram grandes quantidades de texto. Você pode definir os atributos rows e cols para controlar
+     o tamanho visível da textarea.)
+     • <select> (O elemento <select> cria uma lista suspensa, usada com elementos <option> para
+     definir as opções disponíveis. Você pode usar o atributo multiple para permitir múltiplas
+     seleções e o atributo size para controlar o número de opções visíveis.)
+     • <button> (O elemento <button> cria um botão clicável que pode ser personalizado com JavaScript
+     ou usado para enviar ou redefinir um formulário, dependendo do seu atributo type (por exemplo, 
+     submit , reset ou button ). Se o atributo type for omitido ou definido como "button" , ele não 
+     terá nenhum comportamento padrão e poderá ser controlado com JavaScript.)
+     • <fieldset> (O elemento <fieldset> cria um contêiner usado para agrupar elementos de formulário 
+     relacionados. Pode ser útil para organizar formulários complexos com várias seções. O elemento 
+     <legend> pode ser usado dentro de um <fieldset> para fornecer uma legenda ou título para o grupo.)
+    -->
+
+    <label for="message">Mensagem:</label>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    
+    <label for="pasta">Massas:</label>
+    <select id="pasta" name="pasta">
+        <option value="spaghetti">Spaguete</option>
+        <option value="penne">Penne</option>
+        <option value="lasagna">Lasanha</option>
+        <option value="farfalle">Nhoque</option>
+    </select>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    
+    <button type="button" onclick="alert('Olá, Mundo!')">Clique aqui!</button>
+    <!--
+     O código que fornecemos é um elemento de botão HTML que, quando clicado, aciona um pop-up 
+     de alerta exibindo a mensagem "Olá, mundo!".
+     O atributo onclick é um manipulador de eventos JavaScript que especifica a ação a ser executada
+     quando o botão é clicado. Neste caso, a ação é uma chamada à função alert() , que exibe a 
+     mensagem de diálogo pop-up mencionada acima.
+    -->
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <fieldset>
+        <legend>Endereço de Envio</legend>
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" name="address">
+        <br>
+        <label for="city">Cidade:</label>
+        <input type="text" id="city" name="city">
+        <br>
+        <label for="zip-code">CEP:</label>
+        <input type="text" id="zip-code" name="zip-code">
+    </fieldset>
+
+    <br>
+    <br>
+    <hr>
+    <br>    
+
+    <!-- Dominando os atributos do formulário: value, placeholder, disabled, e readonly -->
+    <!--
+     Os elementos de formulário podem ter vários atributos que personalizam seu comportamento e 
+     aparência. Alguns deles já foram apresentados acima! como você pode suspeitar, a lista é 
+     maior, e alguns outros atributos <form> comumente usados ​​incluem value, placeholder, disabled 
+     e readonly.
+     • value (especifica o valor inicial do campo de entrada. Quando o formulário for carregado, 
+     esse valor será pré-preenchido no campo de entrada.)
+     • placeholder (especifica uma dica que descreve o valor esperado do campo de entrada. Ele 
+     não especifica o valor inicial em si, como no caso do atributo value. O texto do placeholder 
+     é exibido no campo de entrada quando ele está vazio e desaparece quando o usuário começa a 
+     digitar.)
+     • disabled (desabilita o campo de entrada, tornando-o não editável e não selecionável . Os 
+     usuários não podem interagir com campos desabilitados, e os campos aparecem esmaecidos ou 
+     visualmente distintos de outros campos. Por exemplo, em formulários ou assistentes de várias 
+     etapas, você pode querer desabilitar determinados campos até que as etapas anteriores sejam 
+     concluídas. Ou, ao exibir um formulário para editar informações de perfil de usuário, você 
+     pode querer mostrar valores padrão ou gerados pelo sistema que os usuários não devem alterar, 
+     como seus nomes de usuário)
+     • readonly (torna o campo de entrada somente leitura , permitindo que os usuários visualizem 
+     o conteúdo, mas não o editem. Ao contrário dos campos desabilitados, os campos somente leitura 
+     ainda são selecionáveis ​​e enviam seus valores quando o formulário é enviado. Este atributo é 
+     útil quando você deseja exibir aos usuários informações que eles não devem editar, mas ainda 
+     devem incluir ao enviar os dados do formulário.)
+    -->
+
+    <label for="first-name">Nome:</label>
+    <input type="text" id="first-name" name="first-name" value="Gabriel Silva">
+
+    <br>
+    <br>
+    <hr>
+    <br>  
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="nome@exemplo.com">
+
+    <br>
+    <br>
+    <hr>
+    <br> 
+    
+    <label for="username">Nome de Usuário:</label>
+    <input type="text" id="username" name="username" value="BielSilva" disabled>
+
+    <br>
+    <br>
+    <hr>
+    <br> 
+
+    <label for="user-id">ID do Usuário:</label>
+    <input type="text" id="user-id" name="user-id" value="BIL123456987" readonly>
+
+    <br>
+    <br>
+    <hr>
+    <br> 
+
+    <!-- Mergulhando mais profundamente nos atributos específicos do formulário: maxlength, min, max, 
+     autocomplete e pattern -->
+     
+    <!--
+     maxlength limita o número de caracteres que podem ser inseridos em um campo de entrada de 
+     texto. Por exemplo, a linha a seguir limitará a entrada "username" a 20 caracteres:
+    -->
+    <input type="text" name="username" maxlength="20">
+
+    <br>
+    <br>
+    <hr>
+    <br> 
+
+    <!--
+     min e max definem os valores mínimo e máximo que podem ser inseridos nos campos de entrada
+     de número, intervalo, data e hora. Por exemplo, a linha a seguir limitará a entrada "idade" 
+     a um número entre 18 e 100:
+    -->
+    <input type="number" name="age" min="18" max="100">
+
+    <br>
+    <br>
+    <hr>
+    <br> 
+
+    <!--
+     autocomplete – controla se o navegador deve preencher automaticamente os campos de entrada 
+     com os dados inseridos anteriormente. Este atributo pode ter os valores "on" (padrão), "off" 
+     ou "new-password" (para desabilitar o preenchimento automático para campos de senha). Por 
+     exemplo, a linha a seguir desabilitará o preenchimento automático para a entrada "address":
+    -->
+    <input type="text" name="address" autocomplete="off">
+
+    <br>
+    <br>
+    <hr>
+    <br> 
+
+    <!--
+     O padrão especifica uma expressão regular à qual o valor de entrada deve corresponder para 
+     ser válido. Este atributo é útil para impor regras específicas de formatação ou validação 
+     de dados. Por exemplo, a linha a seguir exigirá que a entrada "telefone" seja formatada 
+     como um número de telefone de 10 dígitos com hífens:
+    -->
+    <input type="text" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus Melo">
+    <title>Vídeos e Áudio em HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <h1>Elementos de vídeo e áudio em HTML 👨🏻‍💻</h1>
+
+    <!-- Elementos de vídeo e áudio -->
+    <!--
+     O HTML fornece os elementos <video> e <audio> para incorporar esses 
+     tipos de mídia em uma página da web.
+     Os elementos suportam vários atributos, como:
+     • src (para especificar a URL do arquivo de mídia)
+     • controls (para exibir controles de mídia integrados)
+     • width | height (para especificar as dimensões do player)
+     • autoplay (para reproduzir a mídia automaticamente quando a página carrega)
+     • loop (para reprodução em loop)
+     • preload (para armazenar em buffer o arquivo de mídia)
+     • poster (especifica uma imagem que será exibida quando o vídeo não estiver 
+     sendo reproduzido)
+     • media (limita a reprodução do vídeo apenas na versão escolhida em dispositivos 
+     com largura máxima de "x" pixels)
+    -->
+
+    <video src="videos/f1-video-adobe.mp4" poster="imagens/redbullup-f1.jpg"
+    width="500px" height="300px" controls autoplay>
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+    <!--
+     É importante observar que diferentes navegadores suportam diferentes 
+     codecs de vídeo e áudio. Para garantir a compatibilidade entre navegadores, é recomendável 
+     fornecer vários formatos do mesmo arquivo de mídia, como MP4 e WebM para vídeo e MP3 e Ogg 
+     para áudio. Isso pode ser feito usando o elemento <source> dentro dos elementos <video> e <audio>.
+    -->
+    <!-- Video Example -->
+    <video controls>
+        <source src="myvideo.mp4" type="video/mp4" media="(max-width: 600px)">
+        <source src="myvideo.webm" type="video/webm">
+        <p>Your browser does not support the video tag.</p>
+    </video>
+
+    <!-- Audio Example -->
+    <audio controls>
+        <source src="myaudiofile.mp3" type="audio/mp3">
+        <source src="myaudiofile.ogg" type="audio/ogg">
+        <p>Your browser does not support the audio tag.</p>
+    </audio>
+
+</body>
+</html>
