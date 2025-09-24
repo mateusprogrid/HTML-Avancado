@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus Melo">
+    <title>Formulários em HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <h1>Explorando exemplos de formulários em HTML 👨🏻‍💻</h1>
+
+    <!-- Exemplos de Forms -->
+
+    <form action="/submit" method="POST">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" placeholder="seu usuario" required>
+        <br>
+  
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" placeholder="••••••" required>
+        <br>
+  
+        <input type="submit" value="Entrar">
+        <input type="reset" value="Redefinir">
+        </form>
+    <!-- Vamos Analisar -->
+    <!-- 
+     1. <form action="/submit" method="POST">define o início do elemento do formulário. O atributo 
+     action especifica a URL (neste caso , /submit ) para a qual os dados do formulário serão enviados 
+     quando o formulário for enviado. O atributo method especifica o método HTTP (neste caso, POST ) que 
+     será usado para enviar os dados do formulário.
+     2. <label for="username">Username:</label>cria um elemento de rótulo associado ao campo de entrada 
+     "nome de usuário". É importante lembrar que o atributo for deve corresponder ao atributo id do campo 
+     de entrada associado.
+     3. <input type="text" id="username" name="username" required>cria um campo de entrada de texto de 
+     linha única para o usuário inserir seu nome de usuário. O atributo id é usado para identificar 
+     exclusivamente o campo de entrada e associá-lo ao rótulo. O atributo name é usado ao enviar os dados 
+     do formulário. O atributo required indica que o usuário deve preencher este campo antes de enviar o 
+     formulário . (Quando um campo de entrada possui o atributo required , o navegador impedirá o envio do 
+     formulário se o campo for deixado em branco ou, em alguns casos, se não atender aos critérios de validação 
+     especificados, como um endereço de e-mail válido para um campo de entrada de e-mail.)
+     4. <br> cria uma nova linha entre os campos de entrada, mas você já sabe disso, não é?
+     5. <label for="password">Password:</label>cria um elemento de rótulo associado ao campo de entrada "senha".
+     6. <input type="password" id="password" name="password" required>cria um campo de entrada de senha para o 
+     usuário inserir sua senha. Os caracteres inseridos serão mascarados por motivos de segurança. Novamente, o 
+     atributo required indica que o usuário deve preencher este campo antes de enviar o formulário.
+     7. <input type="submit" value="Login">cria um botão de envio para o formulário. Quando o usuário clica neste 
+     botão, os dados do formulário são enviados para a URL especificada usando o método especificado. O atributo 
+     value define o texto exibido no botão, neste caso, "Login".
+     8. <input type="reset" value="Reset">cria um botão de redefinição para o formulário. Quando o usuário clica 
+     neste botão, os campos do formulário serão redefinidos para seus valores iniciais ou limpos, caso não tenham 
+     valores iniciais.
+     9. </form> marca o fim do elemento de formulário .    
+
+     Quando um usuário preenche os campos de nome de usuário e senha e clica no botão "Login", os dados do formulário 
+     são enviados para a URL /submit usando o método POST. Se o usuário clicar no botão "Redefinir", o formulário será 
+     limpo e o usuário poderá inserir novos dados.
+    -->
+
+    <br>
+    <br>
+    <hr>
+    <br> 
+
+    <form action="/submit-bmi" method="post">
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" name="weight" required>
+        <br>
+  
+        <label for="height">Altura (cm):</label>
+        <input type="number" id="height" name="height" required>
+        <br>
+  
+        <button type="submit">Calcular o IMC</button>
+    </form>
+    <!-- Vamos Analisar -->
+    <!--
+     1. O formulário usa entradas numéricas para peso e altura, garantindo que os usuários insiram valores numéricos.
+     2. O atributo required garante que o formulário não possa ser enviado sem esses valores.
+     3. Quando o usuário envia o formulário, os dados são enviados ao ponto de extremidade do servidor especificado no 
+     atributo de ação para cálculo do IMC (a parte do cálculo é tratada no lado do servidor).
+    -->
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <form action="/submit" method="POST">
+        <label for="name">Nome Completo:</label>
+        <input type="text" id="name" name="name" placeholder="Lucas Carvalho" required>
+        <br>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required>
+        <br>
+  
+        <p>Escolha sua preferência de refeição:</p>
+        <label for="vegetarian">Vegetariano(a)</label>
+        <input type="radio" id="vegetarian" name="meal" value="vegetarian" required>
+        <label for="non-vegetarian">Não Vegetariano(a)</label>
+        <input type="radio" id="non-vegetarian" name="meal" value="non-vegetarian" required>
+        <br>
+  
+        <p>Selecione os workshops que você gostaria de participar:</p>
+        <label for="workshop1">Workshop 1</label>
+        <input type="checkbox" id="workshop1" name="workshop1">
+        <label for="workshop2">Workshop 2</label>
+        <input type="checkbox" id="workshop2" name="workshop2">
+        <label for="workshop3">Workshop 3</label>
+        <input type="checkbox" id="workshop3" name="workshop3">
+        <br>
+  
+        <input type="submit" value="Registrar">
+    </form>
+    <!-- Vamos Analisar -->
+    <!--
+     1. <form action="/submit" method="POST">define o início do elemento do formulário. O atributo action especifica 
+     a URL (" /submit ") para a qual os dados do formulário serão enviados quando o formulário for enviado. O atributo 
+     method especifica o método HTTP (neste caso, POST) que será usado para enviar os dados do formulário.
+     2. A seção " Nome completo " fornece um campo de entrada de texto obrigatório para o usuário inserir seu nome 
+     completo.
+     3. A seção " E-mail " fornece um campo de entrada de e-mail obrigatório para o usuário inserir seu endereço de 
+     e-mail. O par atributo-valor type="email" validará o texto inserido para garantir que esteja em um formato de e-mail 
+     adequado.
+     4. A seção " Escolha sua preferência de refeição " oferece um par de botões de opção para o usuário selecionar sua 
+     preferência de refeição (" Vegetariano " ou " Não vegetariano "). Como os botões de opção com o mesmo atributo de 
+     nome pertencem ao mesmo grupo, apenas uma opção pode ser selecionada por vez. O usuário deve escolher uma das opções 
+     antes de enviar o formulário.
+     5. A seção " Selecione os workshops dos quais você gostaria de participar " fornece um grupo de caixas de seleção para 
+     o usuário selecionar os workshops dos quais gostaria de participar (" Workshop 1 ", " Workshop 2 " e/ou " Workshop 3 "). 
+     Os usuários podem escolher qualquer combinação de workshops, pois as caixas de seleção funcionam independentemente umas 
+     das outras.
+     6. <input type="submit" value="Register">cria um botão de envio para o formulário. Quando o usuário clica neste botão, 
+     os dados do formulário (nome completo, e-mail, preferência de refeição e workshops selecionados) serão enviados para a 
+     URL especificada usando o método especificado.
+
+     Quando um usuário preenche o formulário e clica no botão " Registrar ", os dados do formulário serão enviados para a 
+     URL " /submit " usando o método POST.
+    -->
+
+</body>
+</html>
