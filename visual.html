@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus Melo">
+    <title>Elementos Visuais e Interativos em HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Explorando Elementos Visuais e Interativos</h1>
+
+    <!-- A tag <img> e seus atributos -->
+    <!--
+     A tag <img> é um elemento vazio, o que significa que não possui 
+     uma tag de fechamento. Os atributos mais importantes:
+     • src (especifica a URL de origem da imagem que deve ser exibida)
+     • alt (fornece um texto descritivo alternativo da imagem)
+     • width (especifica a largura da imagem em "px" ou "%")
+     • height (especifica a altura da imagem em "px" ou "%")
+    
+     Formatos de imagem:
+     JPEG, é usado para fotografias. PNG, é mais adequado para gráficos e 
+     imagens com fundos transparentes. GIF, é comumente usado para animações 
+     e gráficos simples. SVG, é amplamente usado para logotipos, ícones, 
+     ilustrações e elementos de interfaces de sites responsivos. WebP, é um 
+     formato de imagem desenvolvido pelo Google para oferecer compressão de 
+     imagem superior, resultando em arquivos menores e páginas web mais rápidas 
+     sem perda de qualidade visual.
+    -->
+    
+    <img src="imagens/formula1.jpg"
+    alt="imagem da ferrari fórmula 1" width="600px" height="420px">
+
+    <br>
+    <hr>
+    <br>
+
+    <!--
+     Imagens responsivas: os atributos srcset e sizes Com cada vez mais pessoas usando 
+     dispositivos móveis para navegar na web, a criação de imagens responsivas se tornou 
+     um aspecto crucial do web design. Para criar imagens responsivas em HTML, você pode 
+     usar os atributos srcset e sizes.
+     • srcset (especifica uma lista de arquivos de imagem com diferentes resoluções, 
+     tamanhos e formatos)
+     • sizes (informa ao navegador quanto espaço de tela a imagem ocupará em diferentes 
+     dispositivos) 
+    
+     O que acontece aqui?
+     O atributo srcset fornece três versões diferentes da imagem com tamanhos e resoluções 
+     diferentes (480, 800 e 1200 pixels de largura). O atributo sizes define a largura da 
+     imagem em diferentes pontos de interrupção. No nosso exemplo, a imagem ocupará até 95% 
+     da largura da janela de visualização se ela for menor que 480 px, 45% se a largura da 
+     janela de visualização estiver entre 480 px e 800 px e 30% se for maior que 800 px.
+     
+     É importante observar que, embora o HTML possa fornecer um nível básico de capacidade 
+     de resposta para imagens, técnicas mais avançadas podem ser alcançadas por meio do CSS
+    -->
+
+    <img src="imagens/cockpitf1.jpg"
+        alt="cockpit fórmula 1"
+        srcset="imagens/cockpitf1.jpg 480w,
+                imagens/cockpitf1.jpg 800w,
+                imagens/cockpitf1.jpg 1200w"
+        sizes="(max-width: 480px) 95vw,
+                (max-width: 800px) 45vw,
+                30vw">
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- 
+     Práticas e atributos não trivais, uma boa prática é usar CSS com HTML. Mas, para conhecimento,
+     são essas:
+     • border (especifica a largura da borda ao redor da imagem)
+     • hspace (especificam o espaço horizontal)
+     • vspace (especificam o espaço vertical)
+     • align (especifica o alinhamento de uma imagem em relação ao conteúdo ao redor, com valores 
+     como left, right e center)
+    -->
+
+    <img src="imagens/maxverstappen.gif"
+    alt="imagem max verstappen equipe red bull" 
+    align="left" hspace="150" vspace="100" 
+    border="5" width="600px" height="300px">
+    
+</body>
+</html>
